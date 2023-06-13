@@ -1,37 +1,40 @@
-import 'dart:math';
-
 class Repository {
+  static bool _wasExceptionThrown = false;
+
   Future<List<String>> getFruits() async {
     await Future.delayed(const Duration(seconds: 2));
 
-    return Random().nextBool()
-        ? [
-            'Apple',
-            'Banana',
-            'Orange',
-            'Mango',
-            'Strawberry',
-            'Pineapple',
-            'Watermelon',
-            'Grapes',
-            'Kiwi',
-            'Pear',
-            'Lemon',
-            'Raspberry',
-            'Blueberry',
-            'Avocado',
-            'Peach',
-            'Papaya',
-            'Cherry',
-            'Coconut',
-            'Plum',
-            'Fig',
-            'Guava',
-            'Pomegranate',
-            'Blackberry',
-            'Apricot',
-            'Grapefruit',
-          ]
-        : throw Exception('Failed to load fruits');
+    if (!_wasExceptionThrown) {
+      _wasExceptionThrown = true;
+      throw Exception('Failed to load fruits');
+    }
+
+    return [
+      'Apple',
+      'Banana',
+      'Orange',
+      'Mango',
+      'Strawberry',
+      'Pineapple',
+      'Watermelon',
+      'Grapes',
+      'Kiwi',
+      'Pear',
+      'Lemon',
+      'Raspberry',
+      'Blueberry',
+      'Avocado',
+      'Peach',
+      'Papaya',
+      'Cherry',
+      'Coconut',
+      'Plum',
+      'Fig',
+      'Guava',
+      'Pomegranate',
+      'Blackberry',
+      'Apricot',
+      'Grapefruit',
+    ];
   }
 }
