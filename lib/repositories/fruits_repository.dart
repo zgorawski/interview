@@ -1,4 +1,4 @@
-class Repository {
+class FruitsRepository {
   static bool _wasExceptionThrown = false;
 
   Future<List<String>> getFruits() async {
