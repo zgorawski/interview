@@ -3,7 +3,8 @@ import 'package:interview/business_logic/business_logic_component.dart';
 
 /* Interview exercise
 
-1. Examine what `countingOperation` does and what should be expected result for the given test data
+1. Examine what `countingOperation` should do
+2. Look at testData down below and think what should be the result - use it instead of "??" in the expect method
 2. Write a `countingOperation` body so the test passes
 */
 
